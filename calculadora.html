@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Calculadora</title>
+  
+  
+  <script type="text/javascript">
+     
+      
+      
+      function sumar(valor1,valor2,sumatoria) {
+         
+    var valor1 = document.getElementById("operando1").value;
+      var valor2 = document.getElementById("operando2").value; 
+      
+  
+    
+         
+      var sumatoria = parseInt(valor1) + parseInt(valor2);
+           /* alert("La suma es: "+sumatoria)  */
+          
+      document.getElementById("resultado").innerHTML=sumatoria; 
+         
+    
+   
+       
+}
+     /****resta****/
+       function restar() {
+  
+   var valor1 = document.getElementById("operando1").value;
+   var valor2 = document.getElementById("operando2").value;  
+         
+       var restado = parseInt(valor1) - parseInt(valor2);
+          
+          
+          
+          
+          
+        document.getElementById("resultado").innerHTML=restado;  
+   
+   
+       
+}
+       function dividir() {
+  
+   var valor1 = document.getElementById("operando1").value;
+   var valor2 = document.getElementById("operando2").value;  
+         
+       var dividido = (parseInt(valor1) / parseInt(valor2));
+          
+          
+          
+          
+          
+        document.getElementById("resultado").innerHTML=dividido;  
+   }
+      
+       function multiplicar() {
+  
+   var valor1 = document.getElementById("operando1").value;
+   var valor2 = document.getElementById("operando2").value;  
+         
+       var multiplicado = parseInt(valor1) * parseInt(valor2);
+          
+          
+          
+          
+          
+        document.getElementById("resultado").innerHTML= multiplicado;  
+       
+}
+       
+       function igualar() {
+  
+      sumar();  
+     
+       
+}
+     
+       function limpiar() {
+  
+    document.getElementById("operando1").value="";
+    document.getElementById("operando2").value="";  
+    document.getElementById("resultado").value="";
+   
+       }
+
+      
+      
+      
+      
+      
+      
+    </script>
+  
+  
+	<style>
+		label{
+			width:300px;
+			display:block;
+		}
+		form{
+			position:relative;
+		}
+		form input[type='text']{
+			text-align:right;
+		}
+		.operaciones{
+			position:absolute;
+			left:230px;
+			top:0px;
+			width:120px;			
+		}
+		.operaciones input[type='button']{
+			width:40px;
+			display:block;
+			float:left;
+		}
+	</style>
+</head>
+<body>
+<header id="page_header">
+  <h1>Calculadora</h1>  
+</header>
+	<section>
+		<article class="form">
+			<form>
+				<div class="controls">
+				<label>Operando 1
+				<input type="text" value="" id="operando1" size="5"/>
+				</label>
+				<label>Operando 2
+				<input type="text" value="" id="operando2" size="5"/>
+				</label>
+				</div>
+				<div class="operaciones">
+					<input type="button" value="+" id="suma" onclick="sumar()"/>
+					<input type="button" value="-" id="resta" onclick="restar()"/>
+					<input type="button" value="/" id="divide" onclick="dividir()"/>
+					<input type="button" value="x" id="multiplica" onclick="multiplicar()"/>
+					<input type="button" value="=" id="igual" onclick="igualar()"/>
+					<input type="button" value="C" id="limpia" onclick="limpiar()"/>
+				</div>
+			</form>
+			<footer>
+			<div>
+			    <h3>Resultado</h3>
+					<p>Aqui va el resultado...</p>
+			</div>
+				<div id="resultado">
+					
+				</div>
+			</footer>
+		</article>		
+	</section>
+<footer id="page_footer">
+	<p>Derechos de autor 2018</p>
+</footer>
+</body>
+</html>
